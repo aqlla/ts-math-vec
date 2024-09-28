@@ -1,7 +1,7 @@
 {
   "name": "ts-math-vec",
   "version": "1.0.0",
-  "description": "Typescript vector math stuff.",
+  "description": "Typescript library for vector math stuff.",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
@@ -40,10 +40,10 @@
   "engines": {
     "node": ">=10"
   },
-  "dependencies": {},
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/node": "^22.7.4",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "ava": "^3.12.1",

@@ -1,3 +1,3 @@
 # ts-math-vec
 
-Typescript vector math stuff.
+Typescript library for vector math stuff.
