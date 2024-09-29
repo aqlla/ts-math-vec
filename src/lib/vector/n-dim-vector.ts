@@ -1,5 +1,5 @@
 import { FArray, Take } from "../types/array";
-import { Dim, map, add, sub, mul, div, dot, magnitude, magnitudeSquared, unit, angle, midpoint } from "./math";
+import { Dim, map, add, sub, mul, div, dot, magnitude, magSquared, unit, angle, mid } from "./math";
 
 const VectorComponentLabels = ["x", "y", "z", "w"] as const
 
@@ -169,7 +169,7 @@ export class NDimVector<NDim extends Dim> {
     }
 
     public get magnitudeSquared(): number {
-        return magnitudeSquared(this.components)
+        return magSquared(this.components)
     }
 
     /**
@@ -198,7 +198,7 @@ export class NDimVector<NDim extends Dim> {
      * @returns A new NDimVector representing the midpoint.
      */
     public midpoint(other: FArray<NDim, number> | NDimVector<NDim>): NDimVector<NDim> {
-        const midpointVector = midpoint(this.components,NDimVector.getComponents<NDim>(other))
+        const midpointVector = mid(this.components,NDimVector.getComponents<NDim>(other))
         return new NDimVector<NDim>(midpointVector)
     }
 }
